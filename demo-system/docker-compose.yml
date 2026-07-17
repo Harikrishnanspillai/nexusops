@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  api:
+    build: ./app
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    volumes:
+      - ./logs:/app/logs
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: nexusdb
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql

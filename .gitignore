@@ -7,3 +7,6 @@ dist/
 
 # Environment files
 .env
+
+#Log files
+**/logs/*.log
