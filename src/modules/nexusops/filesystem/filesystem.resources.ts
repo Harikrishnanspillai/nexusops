@@ -3,7 +3,7 @@ import {
   ExecutionContext,
 } from "@nitrostack/core";
 
-import { FilesystemService } from "./filesystem.service";
+import { FilesystemService } from "./filesystem.service.js";
 
 export class FilesystemResources {
   private readonly filesystem = new FilesystemService();

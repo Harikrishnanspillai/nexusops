@@ -10,3 +10,4 @@ dist/
 
 #Log files
 **/logs/*.log
+.nitrostudio/
